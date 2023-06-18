@@ -87,5 +87,34 @@ function getLargestNumber(arr){
 
 console.log(getLargestNumber([1,25,5,3,67,34]))
 
+//3.Check if given strings are anagram
+//approach 1
+function isAnagram(str1,str2){
+    if(str1.length !== str2.length){
+        return false
+    }
+    str1= str1.split("").sort().join("")
+    str2= str2.split("").sort().join("")
+    if(str1 === str2){
+        return true
+    }else{
+        return false
+    }
+}
+//approach 2
+function isAnagram(str1,str2){
+    if(str1.length !== str2.length){
+        return false
+    }
+    for(var i of str1){
+        if(str2.indexOf(i)<0){
+            return false
+        }
+    }
+    return true
+}
+
+console.log(isAnagram("mood silent","doom listen"))
+
 
 
