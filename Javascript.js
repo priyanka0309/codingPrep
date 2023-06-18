@@ -116,5 +116,29 @@ function isAnagram(str1,str2){
 
 console.log(isAnagram("mood silent","doom listen"))
 
+//Check if given string is palindrome
+//approach 1
+function isPalindrome(str){
+    let revString=str.split("").reverse().join("")
+    if(str === revString){
+        return true
+    }else{
+        return false
+    }
+}
+//approach 2
+function isPalindrome(str){
+    for(var i=0; i<(str.length)/2;i++){
+        if(str[i]!==str[str.length-1-i]){
+            return false
+        }
+    }
+    return true
+}
+
+console.log(isPalindrome("madam"))
+
+
+
 
 
