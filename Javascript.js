@@ -138,6 +138,24 @@ function isPalindrome(str){
 
 console.log(isPalindrome("madam"))
 
+// Derive given output
+var InputArr = [{ p: 4 }, { p: 2 }, { p: 9 }, { p: 6 }];
+
+ 
+ let sortedArr=InputArr.sort((a,b)=>a.p-b.p)
+ 
+     let outputArr=[]
+     for(var i=sortedArr[0].p;i<=sortedArr[sortedArr.length -1].p;i++){
+     if(sortedArr.find(e=>e.p === i)){
+         outputArr.push({p : i})
+     }else{
+         outputArr.push({})
+     }
+     }
+ console.log(outputArr)
+
+// var outputArr = [{p:2},{},{p:4},{},{p:6},{},{},{p:9}]
+
 
 
 
