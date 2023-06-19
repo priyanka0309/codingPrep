@@ -116,7 +116,7 @@ function isAnagram(str1,str2){
 
 console.log(isAnagram("mood silent","doom listen"))
 
-//Check if given string is palindrome
+//4.Check if given string is palindrome
 //approach 1
 function isPalindrome(str){
     let revString=str.split("").reverse().join("")
@@ -138,7 +138,7 @@ function isPalindrome(str){
 
 console.log(isPalindrome("madam"))
 
-// Derive given output
+//5. Derive given output
 var InputArr = [{ p: 4 }, { p: 2 }, { p: 9 }, { p: 6 }];
 
  
@@ -157,6 +157,22 @@ var InputArr = [{ p: 4 }, { p: 2 }, { p: 9 }, { p: 6 }];
 // var outputArr = [{p:2},{},{p:4},{},{p:6},{},{},{p:9}]
 
 
+// 6. Get max count of conjugative 1's in given below array
 
+var nums = [1,0,0,1,1,1,0,0,1,0,1,1,0,0,1,1,1,1,0];
+
+let maxDigits=0
+let currentMaxDigits=0
+for(let i=0;i<nums.length;i++){
+    if(nums[i]===1){
+        currentMaxDigits+=1
+        if(maxDigits<currentMaxDigits){
+         maxDigits= currentMaxDigits
+        }
+    }else{
+        currentMaxDigits=0
+    }
+}
+console.log(maxDigits)
 
 
