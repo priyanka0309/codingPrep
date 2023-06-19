@@ -175,4 +175,47 @@ for(let i=0;i<nums.length;i++){
 }
 console.log(maxDigits)
 
+//7. Get the count of persons group by country in give array of persons
+
+var persons = [{ "name": 'xyz',"address": {
+"line_1": "street 1",
+"line_2": "",
+"city": "test city",
+"state": "TX",
+"country": "US"
+}
+},
+{ "name": 'abcd',"address": {
+"line_1": "street 1",
+"line_2": "",
+"city": "test city",
+"state": "TN",
+"country": "IN"
+}
+},
+{ "name": 'efg',"address": {
+"line_1": "street 1",
+"line_2": "",
+"city": "test city",
+"state": "NY",
+"country": "US"
+}
+}]
+
+function getCountByCounter(pplArr){
+    let result=pplArr.reduce((output,person)=>{
+        let country=person['address'].country
+        if(output[country]){
+            output[country]+=1
+        }else{
+              output[country]=1
+        }
+        return output
+    },{})
+    console.log(result)
+}
+
+getCountByCounter(persons)
+
+
 
