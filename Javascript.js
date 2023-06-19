@@ -166,11 +166,11 @@ let currentMaxDigits=0
 for(let i=0;i<nums.length;i++){
     if(nums[i]===1){
         currentMaxDigits+=1
-        if(maxDigits<currentMaxDigits){
-         maxDigits= currentMaxDigits
-        }
     }else{
         currentMaxDigits=0
+    }
+    if(maxDigits<currentMaxDigits){
+         maxDigits= currentMaxDigits
     }
 }
 console.log(maxDigits)
