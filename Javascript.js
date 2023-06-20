@@ -216,6 +216,36 @@ function getCountByCounter(pplArr){
 }
 
 getCountByCounter(persons)
+//Remove duplicates in an array
+let arr=[1,2,3,3,4,1,5]
+
+function removeDuplicates(arr){
+    let updatedArr= arr.reduce((updatedArr, currentElement)=>{
+        if(!updatedArr.includes(currentElement)){
+            updatedArr.push(currentElement)
+        }
+        return updatedArr;
+    },[])
+    return updatedArr
+}
+console.log(removeDuplicates(arr))
+
+//get max number of repeated character
+let str="apple"
+
+function getUniqueCharacters(str){
+  let charArr=str.split("")
+  let charObj=charArr.reduce((acc,curr)=>{
+      if(acc[curr]){
+          acc[curr]+=1
+      }else{
+          acc[curr]=1
+      }
+      return acc
+  },{})
+  return charObj
+}
+console.log(getUniqueCharacters(str))
 
 
 
