@@ -1,0 +1,18 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-gap: 10px;
+  max-width: 1200px;
+}
+.grid-item {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
